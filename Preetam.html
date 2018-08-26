@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Word count</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+<body>
+
+<label>Enter String :</label><input type="search1" class="searchForm-input1" name="demo" id="str"><br><br>
+<label>Enter keyword :</label><input type="search" class="searchForm-input" name="demo" id="sub"><br><br>
+<button type="submit" class="icon searchIcon" onclick="myFunction()">Do you want the number of occurences...Go ahead</button>
+<p align="justify" id="demo"></p>
+      <p id="demo1"></p>
+      <p id="demo2"></p>
+<script>
+function myFunction() {
+    var str = document.getElementById("str").value;
+    var sub = document.getElementById("sub").value;
+    var result = str.split(" ");
+var length = result.length; 
+var count = 0;
+for (i=0;i<length;i++)
+{
+document.getElementById("demo").innerHTML = "Entered string :"+result[i];
+if( result[i] == sub )
+ count++;
+}
+document.getElementById("demo").innerHTML = "Entered string :"+str;
+document.getElementById("demo1").innerHTML = "Entered keyword :"+sub;
+document.getElementById("demo2").innerHTML = "Keyword occurences :"+count;
+    
+}
+</script>
+
+</body>
+</html>
